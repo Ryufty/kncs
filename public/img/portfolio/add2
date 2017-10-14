@@ -1,0 +1,15 @@
+#!/bin/bash
+total=0
+for i in $@
+do
+    # Run a grep statement and if grep returns false (no number found), echo your issue
+    echo i | grep "[0-9]"
+    if [ $? == 0 ]; then
+        echo "Sorry, '$i' is not a number"
+        exit
+    fi
+
+    total=$(( total + i ))
+done
+echo $total
+

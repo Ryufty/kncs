@@ -1,0 +1,29 @@
+{
+  "name": "kncs",
+  "version": "1.0.0",
+  "description": "SYS366 Group Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tangoslee/kncs.git"
+  },
+  "keywords": [
+    "seneca",
+    "casestudy",
+    "sys366"
+  ],
+  "author": "Guozhao Liang, Sangmin Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tangoslee/kncs/issues"
+  },
+  "homepage": "https://github.com/tangoslee/kncs#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0"
+  }
+}
