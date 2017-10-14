@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 /vendor/
-=======
+
 # Logs
 logs
 *.log
@@ -60,4 +59,4 @@ typings/
 # dotenv environment variables file
 .env
 
->>>>>>> 361b57777ec4b3f8aef7b2b7e40e3c34f422c516
+
