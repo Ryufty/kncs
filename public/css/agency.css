@@ -525,6 +525,16 @@ section h3.section-subheading {
   }
 }
 @media (min-width: 992px) {
+  .use-case-desc label {
+    margin-right: 100%;
+  }
+  .use-case-desc dd {
+    margin-left: 0.5em;
+  }
+  .use-case-desc dd div {
+    margin-left: 2em;
+    margin-bottom: 1em;
+  }
   .fa-5x {
     font-size: 4em;
   }
