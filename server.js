@@ -42,6 +42,12 @@ app.get('/docs/:doc', (req, res) => {
     res.render('docs/' + req.params.doc);
 });
 
+app.get('/downloads/:file', (req, res) => {
+    let file = path.join(__dirname + '/media/' + req.params.file);
+    //console.log('file', file);
+    res.download(file);
+});
+
 
 app.listen(HTTP_PORT, (req, res) => {
     console.info('Server is listening on ', HTTP_PORT);
