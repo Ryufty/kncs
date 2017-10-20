@@ -794,3 +794,10 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
+
+.btn-modal-img {
+  cursor: pointer;
+}
+.modal-lg-img {
+  width:90%;
+}

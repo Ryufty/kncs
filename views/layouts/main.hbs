@@ -120,6 +120,7 @@
         </div>
     </footer>
 
+{{> modal/modal_img }}
 
     <!-- Bootstrap Core JavaScript -->
     <!--script src="/bootstrap/js/bootstrap.min.js"></script-->
@@ -155,6 +156,17 @@
                 var $f = $('#portfolioModal6 .modal-body');
                 var html = $f.html();
                 $f.empty().append(html);
+            });
+
+            $('.btn-modal-img').on('click', function(event){
+                event.preventDefault();
+                event.stopPropagation();
+
+                var img = $(this).attr('src');
+
+                $('.modal-img').attr('src', img);
+                $('#modal-img').modal('toggle');
+
             });
 
         })(jQuery);

@@ -48,6 +48,9 @@ app.get('/downloads/:file', (req, res) => {
     res.download(file);
 });
 
+app.use((req, res, next) => {
+    console.log('404?');
+});
 
 app.listen(HTTP_PORT, (req, res) => {
     console.info('Server is listening on ', HTTP_PORT);
