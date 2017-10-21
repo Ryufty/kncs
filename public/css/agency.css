@@ -707,6 +707,7 @@ ul.social-buttons li a:active {
   margin: 0;
   height: 100%;
   width: auto;
+  overflow: auto;
 }
 .portfolio-modal .modal-content {
   border-radius: 0;
