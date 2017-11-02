@@ -72,11 +72,11 @@ kncs
 ## Routing Plan
 
 | URI | Template | Description | Example |
-|--- | --- | --- |
+| --- | --- | --- | --- |
 | / | /view/home.hbs | the main page | http://kncs.herokuapp.com/ |
-| /docs/$subpage | /view/docs/$subpage.hbs | dynamic pages with sub_titles | http://kncs.herokuapp.com/docs/equipment_rental_and_servicing  http://   kncs.herokuapp.com/docs/class_and_classroom_facilitation |
-| /downloads/$file | /media/$file | download files | http://kncs.herokuapp.com/downloads/sys366-group9-lab4-GuozhaoLiang.png http://kncs.herokuapp.   com/downloads/sys366-group9-lab4-SangminLee.png |
-| /media/$file | /media/$file | static links with files | http://kncs.herokuapp.com/media/sys366-group9-lab4-GuozhaoLiang.png http://kncs.herokuapp.  com/downloads/sys366-group9-lab4-SangminLee.png |
+| /docs/$subpage | /view/docs/$subpage.hbs | dynamic pages with sub_titles | http://kncs.herokuapp.com/docs/equipment_rental_and_servicing  http://kncs.herokuapp.com/docs/class_and_classroom_facilitation |
+| /downloads/$file | /media/$file | download files | http://kncs.herokuapp.com/downloads/sys366-group9-lab4-GuozhaoLiang.png   http://kncs.herokuapp.com/downloads/sys366-group9-lab4-SangminLee.png |
+| /media/$file | /media/$file | static links with files | http://kncs.herokuapp.com/media/sys366-group9-lab4-GuozhaoLiang.png   http://kncs.herokuapp.com/downloads/sys366-group9-lab4-SangminLee.png |
 
 ### Static Path
 
