@@ -1,37 +1,88 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Agency](http://startbootstrap.com/template-overviews/agency/)
+# KNCS Case Study
+## SYS366 - Group Project 
 
-[Agency](http://startbootstrap.com/template-overviews/agency/) is a one page agency portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, a responsive timeline, and a working PHP contact form.
+## Getting the Source
 
-## Getting Started
+```bash
 
-Several options are available to get started quickly:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/agency/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-agency.git`
-* Fork the repo
+git clone https://github.com/tangoslee/kncs
 
-## Developing Using Source Files
+```
 
-To use the source files, you will need to have npm installed globally along with Gulp.js. To start:
-* Run `npm install` in the root directory
-* Run `gulp dev` and edit the files as needed
+## Directory Structure
 
-If you need to update the plugins included with this template, simply run the following tasks:
-* First run `npm update` to update the dependencies
-* Then run `gulp copy` to copy the new versions to their proper destinations
+```bash
 
-## Bugs and Issues
+kncs
+├── index.html
+├── media
+│   ├── index.php
+│   ├── sys366-group9-lab2.docx
+│   ├── sys366-group9-lab3-GuozhaoLiang.doc
+│   ├── sys366-group9-lab3-SangminLee.docx
+│   ├── sys366-group9-lab4-GuozhaoLiang.png
+│   ├── sys366-group9-lab4-GuozhaoLiang.uml
+│   ├── sys366-group9-lab4-SangminLee.png
+│   ├── sys366-group9-lab4_SangminLee.uml
+│   ├── sys366-group9-lab5-GuozhaoLiang.docx
+│   ├── sys366-group9-lab5-SangminLee.docx
+│   └── z.uml
+├── package.json
+├── public
+│   ├── bootstrap
+│   ├── css 
+│   │   ├── agency.css
+│   ├── img 
+│   ├── jquery
+│   ├── js
+│   │   ├── agency.js
+│   │   ├── contact_me.js
+├── README.md
+├── server.js
+└── views
+    ├── docs
+    │   ├── casestudy.hbs
+    │   ├── class_and_classroom_facilitation.hbs
+    │   ├── equipment_rental_and_servicing.hbs
+    │   └── stakeholder.hbs
+    ├── home.hbs
+    ├── layouts
+    │   └── main.hbs
+    └── partials
+        ├── businessarea.hbs
+        ├── casestudy.hbs
+        ├── classroom_facilitation.hbs
+        ├── contact.hbs
+        ├── documents.hbs
+        ├── equipment_rental.hbs
+        ├── modal
+        │   ├── modal_casestudy.hbs
+        │   ├── modal_classroom_facilitation.hbs
+        │   ├── modal_equipment_rental.hbs
+        │   ├── modal_img.hbs
+        │   └── modal_stakeholder.hbs
+        ├── schedule.hbs
+        ├── stakeholder.hbs
+        └── team.hbs
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-agency/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/agency/).
+27 directories, 141 files
 
-## Creator
+```
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+## Routing Plan
 
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+| URI | Template | Description | Example |
+|--- | --- | --- |
+| / | /view/home.hbs | the main page | http://kncs.herokuapp.com/ |
+| /docs/$subpage | /view/docs/$subpage.hbs | dynamic pages with sub_titles | http://kncs.herokuapp.com/docs/equipment_rental_and_servicing  http://   kncs.herokuapp.com/docs/class_and_classroom_facilitation |
+| /downloads/$file | /media/$file | download files | http://kncs.herokuapp.com/downloads/sys366-group9-lab4-GuozhaoLiang.png http://kncs.herokuapp.   com/downloads/sys366-group9-lab4-SangminLee.png |
+| /media/$file | /media/$file | static links with files | http://kncs.herokuapp.com/media/sys366-group9-lab4-GuozhaoLiang.png http://kncs.herokuapp.  com/downloads/sys366-group9-lab4-SangminLee.png |
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+### Static Path
 
-## Copyright and License
+```bash
 
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE) license.
+    public
+    media
+
+```
