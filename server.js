@@ -10,7 +10,7 @@ function onHttpStart() {
   console.log("Express http server listening on: " + HTTP_PORT);
 }
 
-app.use('/static', express.static('public'));
+app.use(express.static('public'));
 app.use('/media', express.static('media'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -44,7 +44,8 @@ app.get("/downloads/:file", function(req,res){
     res.download(path.join(__dirname + "/media/" + req.params.file), req.params.file);
 });
 
-/*app.get("/media/:file", function(req,res){
+/* without "app.use('/media', express.static('media'));" use this
+app.get("/media/:file", function(req,res){
     res.sendFile(path.join(__dirname + "/media/" + req.params.file));
 });*/
 
