@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteBase /~sys366_173b05/
+
+RewriteCond %{REQUEST_URI} ^downloads/
+Header set Content-Type application/octet-stream
