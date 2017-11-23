@@ -53,8 +53,3 @@ It's a single page website.
 ## Powered by 
 
 Base Template: https://startbootstrap.com/template-overviews/agency/
-
-
-http://tangos.io:8080/~sys366_173b05/media/sys366-group9-lab5-SangminLee.docx
-http://tangos.io:8080/~sys366_173b05/downloads/sys366-group9-lab4-SangminLee.uml
-http://tangos.io:8080/~sys366_173b05/downloads/sys366-group9-lab4-GuozhaoLiang.uml
