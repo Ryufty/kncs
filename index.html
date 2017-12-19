@@ -1152,7 +1152,7 @@
     
                                     </div>
     
-                                    <p>You can download the file <a href="downloads/sys366-group9-lab9-GuozhaoLiang.doc" download>here</a>.</p>
+                                    <p>You can download the file <a href="downloads/sys366-group9-lab9-GuozhaoLiang.docx" download>here</a>.</p>
     
                                     
                                     <h4>Lab10: Business Rules</h4>
@@ -1170,7 +1170,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <p>You can download the file <a href="downloads/sys366-group9-lab10-GuozhaoLiang.doc" download>here</a>.</p>
+                                    <p>You can download the file <a href="downloads/sys366-group9-lab10-GuozhaoLiang.docx" download>here</a>.</p>
     
                                 </article>
                             </div>
@@ -1213,8 +1213,6 @@
             
                             <address class="text-right">
                                     <a href="#team">
-                                        <!-- <string>Guozhao Liang</string>(040-695-157)
-                                        <img class="img-circle" src="public/img/team/1.jpg" alt="..." style="width:32px;height:32px;margin-bottom:0" > -->
                                         <string>Sang Min Lee</string>(124-192-154)
                                         <img class="img-circle" src="public/img/team/2.jpg" alt="..." style="width:32px;height:32px;margin-bottom:0" >
                                     </a>
@@ -1235,7 +1233,7 @@
                                                 <h5 class="section-heading">Brief Description:</h5>
                                             </dt>
                                             <dd class="row">
-                                                <div class="col-md-9"> This use case enables the ClassroomOrganizer prepare instructor and classroom materials to open class in time and send a notification to Customers before opeining the classes.</div>
+                                                <div class="col-md-9">This use case enables the ClassOrganizer prepare instructor and classroom materials to open class in time and send a notification to Customers before opening the classes.</div>
                                             </dd>
                                         </dl>
                                     </div>
@@ -1248,8 +1246,12 @@
                                         <dd class="row paragraph">
                                             <label class="col-md-3">Pre-Conditions:</label>
                                             <ul>
-                                                <li class="col-md-12">The ClassroomOrganizer sign in the system with a valid id and password.</li>
+                                                <li class="col-md-12">All Classes are already saved in the system include the information of required supplies and tools.</li>
+                                                <li class="col-md-12">All available Instructors are already saved in the system.</li>
+                                                <li class="col-md-12">All Classroom are already saved in the system.</li>
+                                                <li class="col-md-12">The ClassOrganizer is logged into the system with a valid id and password.</li>
                                                 <li class="col-md-12">The system displays the main menu.</li>
+                                                
                                             </ul>
                                         </dd>
 
@@ -1261,15 +1263,43 @@
                                             <div class="table-responsive">
                                                 <table class="table table-striped table-bordered">
                                                     <thead class="bg-darkest-gray text-muted">
-                                                        <tr><th>#</th><th>Actor (ClassroomOrganizer)</th><th>System</th><th>Data Used</th></tr>
+                                                        <tr><th>#</th><th>Actor (ClassOrganizer)</th><th>System</th><th>Data Used</th></tr>
                                                     </thead>
                                                     <tbody class="text-left">
-                                                        <tr><td>#1</td><td>Request 'Maintain Classes' Menu</td><td>Retrieve timetable.<br/>Display classroom timetables and status of the classes that indicate status of instructor and status of classroom materials.</td><td>classroom, date, time, instructor, tools, supplies</td></tr>
-                                                        <tr><td>#2</td><td>Request 'Register Class' Menu</td><td>Display class register form. include available WorkshopInstructor list, available Tool list, and Supply list.</td><td>classroom, date, time, instructor, tools, supplies</td></tr>
-                                                        <tr><td>#3</td><td>Fill in the class name.<br/>Select al WorkshopInstructor in the list. If WorkshopInstructor is not selected, ClassroomOrganizer hire a instructor through IndependentContractorManager. Fill in the form of instructor profile. and click 'Register Instructor' to register an instructor.</td><td>Register the instructor for the classroom.<br/>The display registers success or fail.</td><td>classroom instructor</td></tr>
-                                                        <tr><td>#4</td><td></td><td></td><td></td></tr>
-                                                        <tr><td>#5</td><td></td><td></td><td></td></tr>
-                                                        <tr><td>#6</td><td></td><td></td><td></td></tr>
+                                                        <tr><td>#1</td><td>Request  'Schedule Class' menu.</td><td>Retrieve available classes.<br/>
+                                                                Retrieve available instructors.<br/>
+                                                                Retrieve available classroom.<br/>
+                                                                Display available class list  with the timetable.<br/>
+                                                                </td><td>class<br/>
+                                                                        timetable
+                                                                        </td></tr>
+                                                        <tr><td>#2</td><td>Select an empty timeslot in the timetable.</td><td>Provide a blank new class form.</td><td>date<br/>
+                                                                time
+                                                                </td></tr>
+                                                        <tr><td>#3</td><td>Fill in the form with a class choose in available classes.</td><td>Retrieve the class information include required supplies and tools information</td><td>class name<br/>
+                                                                supplies<br/>
+                                                                tools
+                                                                </td></tr>
+                                                        <tr><td>#4</td><td>Fill in the form with a instructor choose in available instructors.</td><td>Retrieve the instructor information.</td><td>instructor</td></tr>
+                                                        <tr><td>#5</td><td>Fill in the form with  a classroom choose in available classrooms.</td><td>Retrieve the classroom information.</td><td>classroom</td></tr>
+                                                        <tr><td>#6</td><td>Request to save the form</td><td>Validate the timeslot availability.<br/>
+                                                                If it is unavailable, display error.<br/>
+                                                                Call SendOrderSupplies.<br/>
+                                                                Call SendRentTools.<br/>
+                                                                Validate the instructor availability.<br/>
+                                                                If it is unavailable change class status to 'pending' and call a Call SendHireInstructors.<br/>
+                                                                Save the schedule for the class.<br/>
+                                                                Display a summary of class and confirm add another class.<br/>
+                                                                </td><td>date<br/>
+                                                                time<br/>
+                                                                class name<br/>
+                                                                classroom<br/>
+                                                                supplies status<br/>
+                                                                tools staus<br/>
+                                                                instructor
+                                                                </td></tr>
+                                                        <tr><td>#7</td><td>loop #2 ~ #6</td><td>loop #2 ~ #6</td><td></td></tr>
+                                                        <tr><td>#8</td><td>Request to complete schedule.</td><td>Display to main menu.</td><td></td></tr>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -1278,9 +1308,9 @@
                                         <dd class="row">
                                             <label class="col-md-3">Post-Conditions:</label>
                                             <ul>
-                                                <li class="col-md-12">WorkshopInstructor hiring progress will be updated.</li>
-                                                <li class="col-md-12">Rental Tools Progress will be updated.</li>
-                                                <li class="col-md-12">Ordering Supplies Progress will be updated.</li>
+                                                <li class="col-md-12">The status of Supplies in the schedule will be updated when StockSupplies finished.</li>
+                                                <li class="col-md-12">The status of Tools in the schedule will be updated when StockTools finished.</li>
+                                                <li class="col-md-12">The status of Instructor in the schedule will be updated when Instructor is hired.</li>
                                             </ul>
                                         </dd>
 
@@ -1292,43 +1322,40 @@
                                 
                                     <dl class="use-case-desc">
                                         <dd class="row">
-                                            <fieldset class="col-md-3 entity">
-                                                <legend>Supply</legend>
-                                                <ul>
-                                                    <li>name</li>
-                                                </ul>
-                                            </fieldset>
-
-                                            <fieldset class="col-md-3 entity">
-                                                <legend>Tool</legend>
-                                                <ul>
-                                                    <li>name</li>
-                                                </ul>
-                                            </fieldset>
-
+                                            
                                             <fieldset class="col-md-3 entity">
                                                 <legend>Instructor</legend>
                                                 <ul>
                                                     <li>name</li>
                                                 </ul>
                                             </fieldset>
-
+                                            
                                             <fieldset class="col-md-3 entity">
                                                 <legend>Classroom</legend>
                                                 <ul>
                                                     <li>name</li>
                                                 </ul>
                                             </fieldset>
-        
+                                            
                                             <fieldset class="col-md-3 entity">
-                                                <legend>Schedule</legend>
+                                                <legend>Class</legend>
                                                 <ul>
-                                                    <li>Classroom</li>
-                                                    <li>Date</li>
-                                                    <li>Time</li>
-                                                    <li>Instructor</li>
-                                                    <li>Tools</li>
-                                                    <li>Supplies</li>
+                                                    <li>name</li>
+                                                    <li>supplies</li>
+                                                    <li>tools</li>
+                                                </ul>
+                                            </fieldset>
+
+                                            <fieldset class="col-md-3 entity">
+                                                <legend>Timetable</legend>
+                                                <ul>
+                                                    <li>date</li>
+                                                    <li>time</li>
+                                                    <li>className</li>
+                                                    <li>instructor</li>
+                                                    <li>classroom</li>
+                                                    <li>supplyStatus</li>
+                                                    <li>toolStatus</li>
                                                 </ul>
                                             </fieldset>
                                         </dd>
@@ -1336,8 +1363,7 @@
 
                                 </div>
 
-                                <!-- <p>You can download the file <a href="downloads/sys366-group9-it2-GuozhaoLiang.doc" download>here</a>.</p> -->
-                                <p>You can download the file <a href="downloads/sys366-group9-lab9-SangminLee.doc" download>here</a>.</p>
+                                <p>You can download the file <a href="downloads/sys366-group9-lab9-SangminLee.docx" download>here</a>.</p>
 
                                 
                                 <h4>Lab10: Business Rules</h4>
@@ -1347,15 +1373,15 @@
                                             <tr><th>Rule#</th><th>Description</th></tr>
                                         </thead>
                                         <tbody class="text-left">
-                                            <tr><td>BR1</td><td>The Classroom must not be double booked.</td></tr>
-                                            <tr><td>BR2</td><td>One class must be designed maximum 10 students</td></tr>
-                                            <tr><td>BR3</td><td>One class time must be designed for running 1 - 2 hours.</td></tr>
-                                            <tr><td>BR4</td><td>Class materials must be prepared until the class begins.</td></tr>
-                                            <tr><td>BR4</td><td></td></tr>
+                                            <tr><td>BR6</td><td>The Classroom must not be double booked.</td></tr>
+                                            <tr><td>BR7</td><td>One class must be designed maximum 10 students</td></tr>
+                                            <tr><td>BR8</td><td>One class time must be designed for running 1 - 2 hours.</td></tr>
+                                            <tr><td>BR9</td><td>Class materials must be prepared until the class begins.</td></tr>
+                                            <tr><td>BR10</td><td>All payment must be paid with one of cash, Interac/debit, MasterCard and Visa.</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <p>You can download the file <a href="downloads/sys366-group9-lab10-SangminLee.doc" download>here</a>.</p>
+                                <p>You can download the file <a href="downloads/sys366-group9-lab10-SangminLee.docx" download>here</a>.</p>
 
                             </article>
                         </div>
