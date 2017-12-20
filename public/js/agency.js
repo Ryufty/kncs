@@ -33,11 +33,11 @@
     
     // bugfix: not to lost modal focus until the last modal is closed in multi-modal environment.
     var modalstack = [];
-    $('.modal')
-    .on('shown.bs.modal', function() {
+    $(document)
+    .on('shown.bs.modal', '.modal', function() {
         modalstack.push(this);
     })
-    .on('hidden.bs.modal', function() {
+    .on('hidden.bs.modal', '.modal', function() {
         modalstack.pop();   //remove itself.
         if (modalstack.length > 0) {
             $('body').addClass('modal-open');
