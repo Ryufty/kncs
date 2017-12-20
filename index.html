@@ -1039,7 +1039,7 @@
                                 <article class="text-left" style="margin-top: 4em;">
     
                                     <h4>Lab8: System Use Case Diagram</h4>
-                                    <img class="img-responsive img-centered click-img btn-modal-img" src="media/sys366-group9-lab8-SangminLee.png" alt="">
+                                    <img class="img-responsive img-centered click-img btn-modal-img" src="media/sys366-group9-lab8-GuozhaoLiang.png" alt="">
                                     <p>You can download the file <a href="downloads/sys366-group9-lab8-GuozhaoLiang.uml" download>here</a>.</p>
     
                                     <h4>Lab9: Use Case Specification</h4>
@@ -1051,21 +1051,20 @@
                                                     <h5 class="section-heading">Brief Description:</h5>
                                                 </dt>
                                                 <dd class="row">
-                                                    <div class="col-md-9"> This use case enables the ClassroomOrganizer prepare instructor and classroom materials to open class in time and send a notification to Customers before opeining the classes.</div>
+                                                    <div class="col-md-9"> This use case enables the RentalManager to keep in track and modify the availability of the equipment for rent, the condition of the equipment, the status of the rented equipment and to add new equipment for rent.</div>
                                                 </dd>
                                             </dl>
                                         </div>
     
                                         
                                         <h5 class="section-heading">Section 1:
-                                            <span class="section-subheading text-capitalize text-muted">Schedule Classes</span>
+                                            <span class="section-subheading text-capitalize text-muted">ScheduleEquipmentRental</span>
                                         </h5>
                                         <dl class="use-case-desc">
                                             <dd class="row paragraph">
                                                 <label class="col-md-3">Pre-Conditions:</label>
                                                 <ul>
-                                                    <li class="col-md-12">The ClassroomOrganizer sign in the system with a valid id and password.</li>
-                                                    <li class="col-md-12">The system displays the main menu.</li>
+                                                    <li class="col-md-12">RentalManager is logged into the system.</li>
                                                 </ul>
                                             </dd>
     
@@ -1077,15 +1076,14 @@
                                                 <div class="table-responsive">
                                                     <table class="table table-striped table-bordered">
                                                         <thead class="bg-darkest-gray text-muted">
-                                                            <tr><th>#</th><th>Actor (ClassroomOrganizer)</th><th>System</th><th>Data Used</th></tr>
+                                                            <tr><th>#</th><th>Actor (RentalManager)</th><th>System</th><th>Data Used</th></tr>
                                                         </thead>
                                                         <tbody class="text-left">
-                                                            <tr><td>#1</td><td>Request 'Maintain Classes' Menu</td><td>Retrieve timetable.<br/>Display classroom timetables and status of the classes that indicate status of instructor and status of classroom materials.</td><td>classroom, date, time, instructor, tools, supplies</td></tr>
-                                                            <tr><td>#2</td><td>Request 'Register Class' Menu</td><td>Display class register form. include available WorkshopInstructor list, available Tool list, and Supply list.</td><td>classroom, date, time, instructor, tools, supplies</td></tr>
-                                                            <tr><td>#3</td><td>Fill in the class name.<br/>Select al WorkshopInstructor in the list. If WorkshopInstructor is not selected, ClassroomOrganizer hire a instructor through IndependentContractorManager. Fill in the form of instructor profile. and click 'Register Instructor' to register an instructor.</td><td>Register the instructor for the classroom.<br/>The display registers success or fail.</td><td>classroom instructor</td></tr>
-                                                            <tr><td>#4</td><td></td><td></td><td></td></tr>
-                                                            <tr><td>#5</td><td></td><td></td><td></td></tr>
-                                                            <tr><td>#6</td><td></td><td></td><td></td></tr>
+                                                            <tr><td>#1</td><td>RentalManager selects an equipment</td><td>Display the equipment’s Information.</td><td>EquipmentID<br>EquipmentName<br>CustomerID<br>CustomerName<br>CustomerAddress</td></tr>
+                                                            <tr><td>#2</td><td>RentalManager selects rent option</td><td>The system prompt insert starts date and end date of rental period.</td><td>EquipmentID<br>StartDate<br>EndDate</td></tr>
+                                                            <tr><td>#3</td><td>RentalManager selects customer’s name option</td><td>Display input customer’s name option.</td><td>CustomerID<br>CustomerName</td></tr>
+                                                            <tr><td>#4</td><td>RentalManager selects customer’s address option</td><td>Display input customer’s address option.</td><td>CustomerID<br>CustomerAddress</td></tr>
+                                                            <tr><td>#5</td><td>RentalManager selects to confirm all the inputs or changes</td><td>The system display the equipment status and information have been changed.</td><td>EquipmentID<br>EquipmentName<br>CustomerID<br>CustomerName<br>CustomerAddress<br>StartDate<br>EndDate</td></tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -1094,9 +1092,8 @@
                                             <dd class="row">
                                                 <label class="col-md-3">Post-Conditions:</label>
                                                 <ul>
-                                                    <li class="col-md-12">WorkshopInstructor hiring progress will be updated.</li>
-                                                    <li class="col-md-12">Rental Tools Progress will be updated.</li>
-                                                    <li class="col-md-12">Ordering Supplies Progress will be updated.</li>
+                                                    <li class="col-md-12">The equipment information is updated.</li>
+                                                    <li class="col-md-12">The equipment status is updated.</li>
                                                 </ul>
                                             </dd>
     
@@ -1109,42 +1106,31 @@
                                         <dl class="use-case-desc">
                                             <dd class="row">
                                                 <fieldset class="col-md-3 entity">
-                                                    <legend>Supply</legend>
+                                                    <legend>Customers</legend>
                                                     <ul>
-                                                        <li>name</li>
+                                                        <li>CustomerID</li>
+                                                        <li>CustomerName</li>
+                                                        <li>CustomerAddress</li>
+                                                        <li>RentalID</li>
                                                     </ul>
                                                 </fieldset>
     
                                                 <fieldset class="col-md-3 entity">
-                                                    <legend>Tool</legend>
+                                                    <legend>Equipments</legend>
                                                     <ul>
-                                                        <li>name</li>
+                                                        <li>EquipmentID</li>
+                                                        <li>EquipmentName</li>
                                                     </ul>
                                                 </fieldset>
     
                                                 <fieldset class="col-md-3 entity">
-                                                    <legend>Instructor</legend>
+                                                    <legend>Rentals</legend>
                                                     <ul>
-                                                        <li>name</li>
-                                                    </ul>
-                                                </fieldset>
-    
-                                                <fieldset class="col-md-3 entity">
-                                                    <legend>Classroom</legend>
-                                                    <ul>
-                                                        <li>name</li>
-                                                    </ul>
-                                                </fieldset>
-            
-                                                <fieldset class="col-md-3 entity">
-                                                    <legend>Schedule</legend>
-                                                    <ul>
-                                                        <li>Classroom</li>
-                                                        <li>Date</li>
-                                                        <li>Time</li>
-                                                        <li>Instructor</li>
-                                                        <li>Tools</li>
-                                                        <li>Supplies</li>
+                                                        <li>RentalID</li>
+                                                        <li>StartDate</li>
+                                                        <li>EndDate</li>
+                                                        <li>EquipmentID</li>
+                                                        <li>RepairDate</li>
                                                     </ul>
                                                 </fieldset>
                                             </dd>
@@ -1162,11 +1148,11 @@
                                                 <tr><th>Rule#</th><th>Description</th></tr>
                                             </thead>
                                             <tbody class="text-left">
-                                                <tr><td>BR1</td><td></td></tr>
-                                                <tr><td>BR2</td><td></td></tr>
-                                                <tr><td>BR3</td><td></td></tr>
-                                                <tr><td>BR4</td><td></td></tr>
-                                                <tr><td>BR5</td><td></td></tr>
+                                                <tr><td>BR1</td><td>Every equipment must have an ID</td></tr>
+                                                <tr><td>BR2</td><td>Every equipment must have a name</td></tr>
+                                                <tr><td>BR3</td><td>A rented equipment cannot have 2 customers in the renting period</td></tr>
+                                                <tr><td>BR4</td><td>A rented equipment cannot have 2 addresses in the renting period</td></tr>
+                                                <tr><td>BR5</td><td>All equipment in renting status must have a start date and end date for the renting period</td></tr>
                                             </tbody>
                                         </table>
                                     </div>
