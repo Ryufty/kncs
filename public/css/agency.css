@@ -709,10 +709,10 @@ ul.social-buttons li a:active {
   margin: 40px 20px;
   height: 100%;
   width: auto;
-  overflow: auto;
+  /* overflow: auto; */
 }
 .portfolio-modal .modal-content {
-  border-radius: 0;
+  border-radius: 6px;
   background-clip: border-box;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -804,3 +804,28 @@ body {
 .modal-lg-img {
   width:90%;
 }
+
+.inner-table div.table-responsive {
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+/* .use-case-desc .paragraph {
+  margin-bottom: 2em;
+} */
+
+.entity {
+  /* padding: .35em .625em .75em; */
+  margin: 0 5px;
+  border: 1px solid silver;
+  /* margin-bottom: 1em; */
+}
+
+.entity legend {
+  margin-bottom: 0; 
+  border-bottom: 0;
+}
+
+/* .table {
+  margin-bottom: 0;
+} */
