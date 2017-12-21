@@ -10,7 +10,7 @@
                         </div>
                     </div>
     
-                <!--S:maintain_classes-->
+                <!--S:maintain_rental_qeuipment-->
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
@@ -33,37 +33,37 @@
                                     <img class="img-responsive img-centered click-img btn-modal-img" src="media/sys366-group9-lab8-GuozhaoLiang.png" alt="">
                                     <p>You can download the file <a href="downloads/sys366-group9-lab8-GuozhaoLiang.uml" download>here</a>.</p>
     
-                                    <h4>Lab9: Use Case Specification</h4>
-    
+                                    <h4>Lab9: System Use Case Specification: 
+                                        <span class="section-subheading text-capitalize text-muted">ScheduleEquipmentRental</span>
+                                    </h4> 
+
                                     <div class="text-left">
-                                        <div class="row use-case-desc">
-                                            <dl class="col-md-12">
-                                                <dt>
-                                                    <h5 class="section-heading">Brief Description:</h5>
-                                                </dt>
-                                                <dd class="row">
-                                                    <div class="col-md-9"> This use case enables the RentalManager to keep in track and modify the availability of the equipment for rent, the condition of the equipment, the status of the rented equipment and to add new equipment for rent.</div>
-                                                </dd>
-                                            </dl>
-                                        </div>
-    
-                                        
-                                        <h5 class="section-heading">Section 1:
-                                            <span class="section-subheading text-capitalize text-muted">ScheduleEquipmentRental</span>
-                                        </h5>
-                                        <dl class="use-case-desc">
-                                            <dd class="row paragraph">
-                                                <label class="col-md-3">Pre-Conditions:</label>
+
+                                        <dl class="row use-case-desc">
+                                            <dt class="col-md-12">
+                                                <h5 class="section-heading">Brief Description:</h5>
+                                            </dt>
+                                            <dd class="col-md-12">
+                                                <div class="col-md-11">This use case enables the RentalManager to keep in track and modify the availability of the equipment for rent, the condition of the equipment, the status of the rented equipment and to add new equipment for rent.</div>
+                                            </dd>
+                                        </dl>
+                                    
+                                        <dl class="row use-case-desc">
+                                            <dt class="col-md-12">
+                                                <h5 class="section-heading">Pre-Conditions:</h5>
+                                            </dt>
+                                            <dd class="col-md-12">
                                                 <ul>
                                                     <li class="col-md-12">RentalManager is logged into the system.</li>
                                                 </ul>
                                             </dd>
+                                        </dl>
     
-                                            <dd class="row">
-                                                <label class="col-md-3">Scenario Dialogue:</label>
-                                            </dd>
-    
-                                            <dd class="row inner-table">
+                                        <dl class="row use-case-desc">
+                                            <dt class="col-md-12">
+                                                <h5 class="section-heading">Scenario Dialogue:</h5>
+                                            </dt>
+                                            <dd class="col-md-12 inner-table">
                                                 <div class="table-responsive">
                                                     <table class="table table-striped table-bordered">
                                                         <thead class="bg-darkest-gray text-muted">
@@ -79,23 +79,25 @@
                                                     </table>
                                                 </div>
                                             </dd>
-    
-                                            <dd class="row">
-                                                <label class="col-md-3">Post-Conditions:</label>
+                                        </dl>
+                                        
+                                        <dl class="row use-case-desc">
+                                            <dt class="col-md-12">
+                                                <h5 class="section-heading">Post-Conditions:</h5>
+                                            </dt>
+                                            <dd class="col-md-12">
                                                 <ul>
-                                                    <li class="col-md-12">The equipment information is updated.</li>
-                                                    <li class="col-md-12">The equipment status is updated.</li>
+                                                    <li>The equipment information is updated.</li>
+                                                    <li>The equipment status is updated.</li>
                                                 </ul>
                                             </dd>
-    
                                         </dl>
-    
-                                        <h5 class="section-heading">Section 2:
-                                            <span class="section-subheading text-capitalize text-muted">Data Used Organization</span>
-                                        </h5>
-                                    
-                                        <dl class="use-case-desc">
-                                            <dd class="row">
+
+                                        <dl class="row use-case-desc">
+                                            <dt class="col-md-12">
+                                                <h5 class="section-heading">Data Used Organization:</h5>
+                                            </dt>
+                                            <dd class="col-md-12">
                                                 <fieldset class="col-md-3 entity">
                                                     <legend>Customers</legend>
                                                     <ul>
@@ -123,7 +125,8 @@
                                                         <li>EquipmentID</li>
                                                         <li>RepairDate</li>
                                                     </ul>
-                                                </fieldset>
+                                                </fieldset>                                                
+                                                
                                             </dd>
                                         </dl>
     
@@ -147,15 +150,14 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <p>You can download the file <a href="downloads/sys366-group9-lab10-GuozhaoLiang.docx" download>here</a>.</p>
-    
+                                    <p>You can download the file <a href="downloads/sys366-group9-lab10-GuozhaoLiang.docx" download>here</a>.</p>    
                                 </article>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!--E:maintain_classes-->
+                <!--E:maintain_rental_qeuipment-->
     
                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                 

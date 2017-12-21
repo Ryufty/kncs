@@ -810,15 +810,15 @@ body {
   margin-bottom: 0;
 }
 
-.use-case-desc .paragraph {
+/* .use-case-desc .paragraph {
   margin-bottom: 2em;
-}
+} */
 
 .entity {
   /* padding: .35em .625em .75em; */
-  margin: 0 2px;
+  margin: 0 5px;
   border: 1px solid silver;
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
 }
 
 .entity legend {

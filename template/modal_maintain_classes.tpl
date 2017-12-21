@@ -33,42 +33,41 @@
                                     <img class="img-responsive img-centered click-img btn-modal-img" src="media/sys366-group9-lab8-SangminLee.png" alt="">
                                     <p>You can download the file <a href="downloads/sys366-group9-lab8-SangminLee.uml" download>here</a>.</p>
     
-                                    <h4>Lab9: Use Case Specification</h4>
+                                    <h4>Lab9: System Use Case Specification: 
+                                        <span class="section-subheading text-capitalize text-muted">ScheduleClasses</span>
+                                    </h4>
     
                                     <div class="text-left">
-                                        <div class="row use-case-desc">
-                                            <dl class="col-md-12">
-                                                <dt>
-                                                    <h5 class="section-heading">Brief Description:</h5>
-                                                </dt>
-                                                <dd class="row">
-                                                    <div class="col-md-9">This use case enables the ClassOrganizer prepare instructor and classroom materials to open class in time and send a notification to Customers before opening the classes.</div>
-                                                </dd>
-                                            </dl>
-                                        </div>
-    
-                                        
-                                        <h5 class="section-heading">Section 1:
-                                            <span class="section-subheading text-capitalize text-muted">Schedule Classes</span>
-                                        </h5>
-                                        <dl class="use-case-desc">
-                                            <dd class="row paragraph">
-                                                <label class="col-md-3">Pre-Conditions:</label>
+
+                                        <dl class="row use-case-desc">
+                                            <dt class="col-md-12">
+                                                <h5 class="section-heading">Brief Description:</h5>
+                                            </dt>
+                                            <dd class="col-md-12">
+                                                <div class="col-md-11">This use case enables the ClassOrganizer prepare instructor and classroom materials to open class in time and send a notification to Customers before opening the classes.</div>
+                                            </dd>
+                                        </dl>
+                                    
+                                        <dl class="row use-case-desc">
+                                            <dt class="col-md-12">
+                                                <h5 class="section-heading">Pre-Conditions:</h5>
+                                            </dt>
+                                            <dd class="col-md-12">
                                                 <ul>
                                                     <li class="col-md-12">All Classes are already saved in the system include the information of required supplies and tools.</li>
                                                     <li class="col-md-12">All available Instructors are already saved in the system.</li>
                                                     <li class="col-md-12">All Classroom are already saved in the system.</li>
                                                     <li class="col-md-12">The ClassOrganizer is logged into the system with a valid id and password.</li>
                                                     <li class="col-md-12">The system displays the main menu.</li>
-                                                    
                                                 </ul>
                                             </dd>
+                                        </dl>
     
-                                            <dd class="row">
-                                                <label class="col-md-3">Scenario Dialogue:</label>
-                                            </dd>
-    
-                                            <dd class="row inner-table">
+                                        <dl class="row use-case-desc">
+                                            <dt class="col-md-12">
+                                                <h5 class="section-heading">Scenario Dialogue:</h5>
+                                            </dt>
+                                            <dd class="col-md-12 inner-table">
                                                 <div class="table-responsive">
                                                     <table class="table table-striped table-bordered">
                                                         <thead class="bg-darkest-gray text-muted">
@@ -113,24 +112,26 @@
                                                     </table>
                                                 </div>
                                             </dd>
-    
-                                            <dd class="row">
-                                                <label class="col-md-3">Post-Conditions:</label>
+                                        </dl>
+                                        
+                                        <dl class="row use-case-desc">
+                                            <dt class="col-md-12">
+                                                <h5 class="section-heading">Post-Conditions:</h5>
+                                            </dt>
+                                            <dd class="col-md-12">
                                                 <ul>
-                                                    <li class="col-md-12">The status of Supplies in the schedule will be updated when StockSupplies finished.</li>
-                                                    <li class="col-md-12">The status of Tools in the schedule will be updated when StockTools finished.</li>
-                                                    <li class="col-md-12">The status of Instructor in the schedule will be updated when Instructor is hired.</li>
+                                                    <li>The status of Supplies in the schedule will be updated when StockSupplies finished.</li>
+                                                    <li>The status of Tools in the schedule will be updated when StockTools finished.</li>
+                                                    <li>The status of Instructor in the schedule will be updated when Instructor is hired.</li>
                                                 </ul>
                                             </dd>
-    
                                         </dl>
-    
-                                        <h5 class="section-heading">Section 2:
-                                            <span class="section-subheading text-capitalize text-muted">Data Used Organization</span>
-                                        </h5>
-                                    
-                                        <dl class="use-case-desc">
-                                            <dd class="row">
+
+                                        <dl class="row use-case-desc">
+                                            <dt class="col-md-12">
+                                                <h5 class="section-heading">Data Used Organization:</h5>
+                                            </dt>
+                                            <dd class="col-md-12">
                                                 
                                                 <fieldset class="col-md-3 entity">
                                                     <legend>Instructor</legend>
