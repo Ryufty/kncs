@@ -44,7 +44,7 @@
                                                 <h5 class="section-heading">Brief Description:</h5>
                                             </dt>
                                             <dd class="col-md-12">
-                                                <div class="col-md-11">This use case enables the ClassOrganizer prepare instructor and classroom materials to open class in time and send a notification to Customers before opening the classes.</div>
+                                                <div class="col-md-11">This use case enables the ClassOrganizer to create a new class into a specific date and time, which include assigning instructor and requesting supplies and tools for the class.</div>
                                             </dd>
                                         </dl>
                                     
